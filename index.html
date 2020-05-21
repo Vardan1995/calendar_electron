@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Calendar</title>
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <style type="text/css">
+      table,
+      tr,
+      td,
+      th {
+        border-collapse: collapse;
+        border: 2px solid rgb(133, 23, 23);
+        border-radius: 25px;
+      }
+      tr,
+      td,
+      th {
+        width: 100px;
+        height: 50px;
+        text-align: center;
+      }
+      button {
+        width: 200px;
+        height: 40px;
+        background-color: green;
+        border-radius: 25px;
+      }
+      select {
+        height: 30px;
+        background-color: lightseagreen;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div>
+        <h1 id="monthAndYear"></h1>
+        <table id="calendar">
+          <thead>
+            <tr>
+              <th>Sun</th>
+              <th>Mon</th>
+              <th>Tue</th>
+              <th>Wed</th>
+              <th>Thu</th>
+              <th>Fri</th>
+              <th>Sat</th>
+            </tr>
+          </thead>
+
+          <tbody id="calendar-body"></tbody>
+        </table>
+        <br />
+
+        <div>
+          <button id="previous" onclick="prev()">
+            Prev
+          </button>
+
+          <button id="next" onclick="next()">
+            Next
+          </button>
+        </div>
+        <br />
+        <form>
+          <label for="month" style="color: indigo; font-size: large;"
+            >Select month:
+          </label>
+          <select name="month" id="month" onchange="jumpToSelectedMounth()">
+            <option value="0">Jan</option>
+            <option value="1">Feb</option>
+            <option value="2">Mar</option>
+            <option value="3">Apr</option>
+            <option value="4">May</option>
+            <option value="5">Jun</option>
+            <option value="6">Jul</option>
+            <option value="7">Aug</option>
+            <option value="8">Sep</option>
+            <option value="9">Oct</option>
+            <option value="10">Nov</option>
+            <option value="11">Dec</option>
+          </select>
+        </form>
+      </div>
+    </div>
+    <script src="renderer.js"></script>
+  </body>
+</html>

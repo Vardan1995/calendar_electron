@@ -1,0 +1,14 @@
+{
+  "name": "calendar",
+  "version": "1.0.0",
+  "description": "This is a desktop app ",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Vardan",
+  "license": "",
+  "devDependencies": {
+    "electron": "^8.3.0"
+  }
+}
